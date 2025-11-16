@@ -20,7 +20,9 @@ RUN apt-get update && \
     ruby-dev \
     tmux \
     gcc \
-    make
+    make \
+    socat \
+    netcat
 
 RUN gem install one_gadget
 RUN gem install seccomp-tools
