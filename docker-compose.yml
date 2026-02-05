@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  pwnbox:
+    build: .
+    container_name: pwnbox
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/root/pwnbox
