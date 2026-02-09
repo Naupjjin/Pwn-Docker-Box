@@ -1,10 +1,44 @@
-version: "3.9"
-
 services:
-  pwnbox:
-    build: .
-    container_name: pwnbox
+  pwnbox-20.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.20.04
+    container_name: pwnbox-20.04
     tty: true
     stdin_open: true
     volumes:
       - .:/root/pwnbox
+    profiles: ["20"]
+
+  pwnbox-22.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.22.04
+    container_name: pwnbox-22.04
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/root/pwnbox
+    profiles: ["22"]
+
+  pwnbox-24.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.24.04
+    container_name: pwnbox-24.04
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/root/pwnbox
+    profiles: ["24"]
+
+  pwnbox-25.04:
+    build:
+      context: .
+      dockerfile: Dockerfile.25.04
+    container_name: pwnbox-25.04
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/root/pwnbox
+    profiles: ["25"]
